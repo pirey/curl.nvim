@@ -91,8 +91,9 @@ T["Parser"]["can parse list after headers"] = function()
 end
 
 T["Parser"]["can parse large command"] = function()
-  local Path = require("plenary.path")
-  local curl_output = Path:new("tests/tests/parser/big.json"):read()
+  local fd = io.open("tests/tests/parser/big.json", "r")
+  local curl_output = fd:read("*a")
+  fd:close()
 
   local parsed_output = output_parser.parse_curl_output(curl_output)
 

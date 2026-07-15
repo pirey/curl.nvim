@@ -37,10 +37,7 @@ Installation example for [Lazy](https://github.com/folke/lazy.nvim):
 {
   "oysandvik94/curl.nvim",
   cmd = { "CurlOpen" },
-  dependencies = {
-  "nvim-lua/plenary.nvim",
-},
-config = true,
+  config = true,
 }
 ```
 
